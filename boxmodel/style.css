@@ -1,0 +1,15 @@
+/*   */
+div {
+  height: 200px;
+  width: 500px;
+  background-color: pink;
+  border: 5px solid black;
+  /* border-right-color: red;
+  border-left-color: green;
+  border-bottom-color: yellow;
+  border-top-color: blue; */
+  border-width: 5px;
+  border-style: solid;
+  margin: 20px 50px;
+  padding: 10px;
+}

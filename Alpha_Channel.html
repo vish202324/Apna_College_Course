@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Alpha Channel: Opacity</title>
+    <style>
+        div {
+            height: 200px;
+            width: 200px;
+            background-color: rgba(255, 0, 0, 0.3);
+
+
+        }
+
+        /* for element */
+        #opacity {
+            background-color: orange;
+            opacity: 0.5;
+            /* Opacity controlling the visibility of the whole div which contain button and heading not of the colors
+            if the opacity become 0 div will be hidden including button and heading.
+            so it is controlling the visibility of the element.
+            like here of Button */
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>This is Color Opacity</h1>
+    </div>
+    <div id="opacity">
+        <h1>This is Element Opacity</h1>
+        <button>Click me!</button>
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,14 @@
+div {
+  height: 150px;
+  width: 300px;
+  background-color: grey;
+  border: 5px dotted black;
+  margin-top: 20px;
+  margin-right: 1em;
+  /* margin-right will be equal to 1em = 16px because default font size is 16px*/
+  margin-bottom: 40px;
+  margin-left: 2em;
+  /* this will equals to 2em = 2 x default font size, 2 x 16 = 32px */
+  padding: 1em;
+  /* 1em = 1 x default font size, 1 x 16 px */
+}

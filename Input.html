@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Input in HTML</title>
+</head>
+
+<body>
+    <!-- Tip: Any button tag used inside the form tag will always submit that form
+     ,but if button tag used outside the tag will not perform any action-->
+    <form action="">
+        <!-- creating connection b/w label and input the 
+         attribute of "for" in label and "id" in input must be same -->
+        <label for="username">username:</label>
+        <input type="text" name="username" id="username">
+        <button type="button" onclick="printValue()">Submit</button>
+    </form>
+    <p id="output">Your entered value will appear here.</p>
+    <script>
+        function printValue() {
+            // Get the input element by its ID
+            let nameInput = document.getElementById("username").value;
+
+            // Print the value to the console
+            document.getElementById("output").innerText = "You entered: " + nameInput;
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,111 @@
+/* Universal Selectors: Use(Asterisk *) to select Everything is the document */
+* {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+/* Element Selector like: h1, h2 and p tag etc*/
+h1,
+p {
+  color: #b92b27;
+}
+/* Id Selector */
+#login {
+  background-color: #b92b27;
+  color: whitesmoke;
+}
+/* Id Selector */
+#signup {
+  background-color: blueviolet;
+  color: whitesmoke;
+}
+/* class selector */
+.mybutton {
+  background-color: rgb(5, 111, 5);
+  color: white;
+  height: 25px;
+  width: 100px;
+}
+
+/* Descendent Selector */
+p a {
+  color: rgb(255, 0, 0);
+  font-weight: bold;
+  background-color: rgb(255, 255, 0);
+}
+
+/* Descendent Selector with multi level */
+nav ul li a {
+  background-color: rgb(201, 19, 19);
+  color: white;
+}
+/* Adjacent Sibling Combinator Selector */
+p + h3 {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  /* background-color: white; */
+  border: 1px solid;
+  font-weight: bold;
+  color: cornflowerblue;
+}
+
+/* Adjacent Sibling */
+.mybutton + .upvote {
+  background-color: blueviolet;
+  color: white;
+}
+
+/* Child Combinator */
+div > input {
+  height: 30px;
+  width: 120px;
+}
+/* Attribute Selectors */
+input[type="text"] {
+  color: red;
+}
+
+input[type="password"] {
+  color: green;
+}
+/* Can target by using attribute name only */
+button[class="mybutton"] {
+  border: 3px solid rgb(222, 243, 116);
+}
+
+/* Pseudo Class Selector- hover */
+button:hover {
+  background-color: black;
+  color: white;
+}
+
+/* Pseudo Class Selector- active */
+button:active {
+  background-color: hotpink;
+}
+
+/* Pseudo Class Selector- Checked */
+input[type="radio"]:checked + label[for="male"] {
+  color: green;
+  font-weight: bold;
+}
+
+/* Pseudo Class Selector- nth-of-type */
+div:nth-last-of-type(2n) {
+  background-color: antiquewhite;
+}
+
+/* Pseudo Elements */
+
+/* ::first-letter */
+h1::first-letter {
+  font-size: 50px;
+  color: green;
+}
+
+/* ::first-line */
+#first_line::first-line {
+  color: red;
+}
+
+/* ::selection- this keyword will apply the properties on selected content when we select the content. like below */
+#first_line::selection {
+  background-color: yellow;
+}

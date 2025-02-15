@@ -1,0 +1,64 @@
+/* Percent % - relative property */
+/* h1 is the child of the body tag(parent) */
+/* h1 will reduce thier width relative to parent */
+h1 {
+  border: 1px solid black;
+  width: 50%;
+}
+
+#outer {
+  height: 300px;
+  width: 300px;
+  background-color: pink;
+  margin: 50px;
+}
+
+#inner {
+  height: 100px;
+  width: 100px;
+  background-color: cornflowerblue;
+  margin-left: 50%;
+}
+
+/* em property */
+#heading_1 {
+  border: 1px solid black;
+  width: 50%;
+}
+
+#outer1 {
+  height: 300px;
+  width: 300px;
+  background-color: pink;
+  font-size: 10px;
+  border: 1px solid black;
+}
+
+#inner1 {
+  height: 100px;
+  width: 100px;
+  background-color: cornflowerblue;
+  font-size: 2em; /* 2em means twice of the the parent’s font size. */
+  padding: 1em; /* 1em means equals to 20px(2em = 2 x 10px of parents) inner1’s font size. padding is directly depend to font size of the same child inner1*/
+}
+
+button {
+  font-size: 50px;
+  border-radius: 15px;
+  border: 5px solid green;
+  padding-left: 1em;
+  padding-right: 1em;
+}
+/* Snowball effect, Drawback of em */
+section {
+  font-size: 15px;
+}
+/* See the effect */
+/* div {
+  font-size: 2em;
+} */
+
+/* Solution */
+div {
+  font-size: 2rem;
+}

@@ -1,0 +1,17 @@
+div {
+  background-color: yellow;
+}
+
+/* form {
+  background-color: skyblue;
+} */
+
+/* we have to inherit parent color for input using below code */
+/* because input, buttons do not inherit from their parents directly */
+input {
+  background-color: inherit;
+}
+
+button:hover {
+  background-color: red;
+}
