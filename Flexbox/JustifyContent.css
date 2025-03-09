@@ -1,0 +1,68 @@
+.container {
+  height: 200px;
+  width: 80%;
+  border: 2px solid black;
+  margin: 10px auto;
+  display: flex;
+  background-color: azure;
+}
+h1 {
+  text-align: center;
+}
+.container div {
+  height: 40px;
+  width: 80px;
+  color: white;
+  font-size: 1.2em;
+  text-align: center;
+}
+/* Flex direction- will handle the direction of the elements */
+/* row- means elements will arranging from left to right side. and start point will be left side*/
+/* columns- means elements will arranging from top to bottom. and start point will be top. */
+/* if directions get reverse (row-reverse, column-reverse) then start point will be opposite*/
+/* Now, Justify-content: flex-start, means */
+
+#container1 {
+  flex-direction: column;
+  justify-content: flex-start;
+}
+
+#container2 {
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+#container3 {
+  flex-direction: column-reverse;
+  justify-content: flex-start;
+}
+
+#container4 {
+  flex-direction: column-reverse;
+  justify-content: flex-end;
+}
+
+#container5 {
+  flex-direction: column;
+  justify-content: center;
+}
+
+#container6 {
+  flex-direction: column-reverse;
+  justify-content: center;
+}
+
+#container7 {
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#container8 {
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#container9 {
+  flex-direction: row;
+  justify-content: space-evenly;
+}

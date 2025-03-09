@@ -1,0 +1,16 @@
+div {
+  height: 100px;
+  width: 100px;
+  background-color: orange;
+  margin: 0 auto; /* to centralize the div*/
+  margin-top: 10px;
+  /* below is the way called "transition shorthand" 
+  here we are mentioning that margin-top property will take effect in 2s
+  with ease-in-out effect and with delay of 0.2s*/
+  transition: margin-top 2s ease-in-out 0.2s;
+}
+
+div:hover {
+  margin-top: 400px;
+  background-color: pink;
+}

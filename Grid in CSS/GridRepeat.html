@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Repeat</title>
+    <style>
+        .container {
+            display: grid;
+
+            background-color: rgb(219, 244, 81);
+            grid-template-rows: repeat(5, 1fr);
+
+            /* this will create 5 rows of equal size of 1 fraction */
+            /* repeat() is the method which repeat the process of making rows and column */
+            grid-template-columns: repeat(3, 1fr);
+
+            /* also write in this form:  */
+            /* grid-template-columns: 1fr 1fr 1fr; */
+            /* gap: 10px; */
+            height: 600px;
+            width: 600px;
+            /* Total width */
+            border: 2px solid black;
+        }
+
+        .item {
+            background: lightblue;
+            border: 2px solid white;
+            /* padding: 20px; */
+            /* text-align: center; */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+    </div>
+
+</body>
+
+</html>

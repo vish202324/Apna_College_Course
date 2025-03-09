@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>justify Content</title>
+    <style>
+        * {
+            text-align: center;
+        }
+
+        .containerRow {
+            height: 250px;
+            width: 80%;
+            border: 3px solid black;
+            margin: 5px auto;
+            color: white;
+            background-color: palevioletred;
+            display: flex;
+        }
+
+        /* for column container */
+        .containerColumn {
+            height: 250px;
+            width: 80%;
+            border: 2px solid black;
+            margin: 5px auto;
+            color: white;
+            background-color: rgb(112, 216, 143);
+            display: flex;
+        }
+
+        /* Child div */
+        .flexItem {
+            height: 40px;
+            width: 80px;
+            border: 2px solid rgb(255, 255, 255);
+            background-color: black;
+        }
+
+        #flexContainer1 {
+            /* When display: flex, By Default the flex direction set as row which means items are align from left to right Horizontally*/
+            flex-direction: row;
+            /* but you can set it manually also */
+            justify-content: flex-start;
+        }
+
+        #flexContainer2 {
+            flex-direction: row;
+            justify-content: flex-end;
+        }
+
+        #flexContainer3 {
+            flex-direction: row-reverse;
+            justify-content: flex-start;
+        }
+
+        #flexContainer4 {
+            flex-direction: row-reverse;
+            justify-content: flex-end;
+        }
+
+        #flexContainer5 {
+            /* When display: flex, By Default the flex direction set as row which means items are align from left to right Horizontally*/
+            flex-direction: column;
+            /* but you can set it manually also */
+            justify-content: flex-start;
+        }
+
+        #flexContainer9 {
+            flex-direction: row;
+            justify-content: space-evenly;
+        }
+
+
+        #flexContainer6 {
+            flex-direction: column;
+            justify-content: flex-end;
+        }
+
+        #flexContainer7 {
+            flex-direction: column-reverse;
+            justify-content: flex-start;
+        }
+
+        #flexContainer8 {
+            flex-direction: column-reverse;
+            justify-content: flex-end;
+        }
+    </style>
+</head>
+
+<body>
+    <h4>flex-direction:row, justify-content: flex-start</h4>
+    <div id="flexContainer1" class="containerRow">
+        <div class="flexItem">1(Start)</div>
+        <div class="flexItem">2</div>
+        <div class="flexItem">3</div>
+        <div class="flexItem">4(End)</div>
+    </div>
+    <h4>flex-direction:row , justify-content: flex-end</h4>
+    <div id="flexContainer2" class="containerRow">
+        <div class="flexItem">1(Start)</div>
+        <div class="flexItem">2</div>
+        <div class="flexItem">3</div>
+        <div class="flexItem">4(End)</div>
+    </div>
+    <h4>flex-direction:row-reverse , justify-content: flex-start</h4>
+    <div id="flexContainer3" class="containerRow">
+        <div class="flexItem">1(Start)</div>
+        <div class="flexItem">2</div>
+        <div class="flexItem">3</div>
+        <div class="flexItem">4(End)</div>
+    </div>
+    <h4>flex-direction:row-reverse , justify-content: flex-end</h4>
+    <div id="flexContainer4" class="containerRow">
+        <div class="flexItem">1(Start)</div>
+        <div class="flexItem">2</div>
+        <div class="flexItem">3</div>
+        <div class="flexItem">4(End)</div>
+    </div>
+
+    <h4>flex-direction:row , justify-content: center</h4>
+    <div id="flexContainer9" class="containerRow">
+        <div class="flexItem">1(Start)</div>
+        <div class="flexItem">2</div>
+        <div class="flexItem">3</div>
+        <div class="flexItem">4(End)</div>
+    </div>
+
+    <!--Flex-direction: Column -->
+    <h4>flex-direction:column, justify-content: flex-start</h4>
+    <div id="flexContainer5" class="containerColumn">
+        <div class="flexItem">1(Start)</div>
+        <div class="flexItem">2</div>
+        <div class="flexItem">3</div>
+        <div class="flexItem">4(End)</div>
+    </div>
+    <h4>flex-direction:column , justify-content: flex-end</h4>
+    <div id="flexContainer6" class="containerColumn">
+        <div class="flexItem">1(Start)</div>
+        <div class="flexItem">2</div>
+        <div class="flexItem">3</div>
+        <div class="flexItem">4(End)</div>
+    </div>
+    <h4>flex-direction:column-reverse , justify-content: flex-start</h4>
+    <div id="flexContainer7" class="containerColumn">
+        <div class="flexItem">1(Start)</div>
+        <div class="flexItem">2</div>
+        <div class="flexItem">3</div>
+        <div class="flexItem">4(End)</div>
+    </div>
+    <h4>flex-direction:row-reverse , justify-content: flex-end</h4>
+    <div id="flexContainer8" class="containerColumn">
+        <div class="flexItem">1(Start)</div>
+        <div class="flexItem">2</div>
+        <div class="flexItem">3</div>
+        <div class="flexItem">4(End)</div>
+    </div>
+
+</body>
+
+</html>

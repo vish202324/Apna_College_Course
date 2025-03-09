@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animation in CSS</title>
+    <style>
+        /* font changing Animation */
+        @keyframes fontAnimation {
+            from {
+                font-size: 0;
+            }
+
+            to {
+                font-size: 45px;
+            }
+        }
+
+        /* color changing Animation */
+        @keyframes colorAnimate {
+            from {
+                background-color: yellow;
+            }
+
+            to {
+                background-color: orange;
+            }
+        }
+
+        /* width changing Animation */
+        @keyframes widthAnimate {
+            from {
+                width: 0px;
+            }
+
+            to {
+                width: 500px;
+            }
+        }
+
+        .box {
+            width: 300px;
+            height: 100px;
+            background-color: orange;
+            /* Applying Animation */
+            animation-name: widthAnimate;
+            animation-duration: 5s;
+            animation-timing-function: ease-in-out;
+            animation-delay: 0s;
+            animation-iteration-count: infinite;
+            /* it can be 1 , 2, 3... or Infinite*/
+            animation-direction: normal;
+            color: black;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">Good Morning</div>
+</body>
+
+</html>

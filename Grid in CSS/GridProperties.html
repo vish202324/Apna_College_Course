@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid Properties</title>
+    <style>
+        .container {
+            display: grid;
+            background-color: rgb(219, 244, 81);
+            gap: 10px;
+            height: 300px;
+            width: 600px;
+            grid-template-columns: repeat(3, 2fr);
+            grid-template-rows: repeat(3, 1fr);
+            border: 2px solid black;
+            /* Justify Item controlling the position of all items inside the grid in horizontal */
+            justify-items: center;
+            /* this is for vertical position */
+            align-items: center;
+        }
+
+        .item {
+            width: 80px;
+            height: 60px;
+            background: palevioletred;
+            border: 2px solid white;
+            color: white;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* handling specfic item of the Grid */
+        /* Justify Self property works for specific grid */
+        .one {
+            justify-self: start;
+        }
+    </style>
+</head>
+<!-- grid-column किसी item को specific columns में फैलाने के लिए use होता है। -->
+
+<body>
+    <div class="container">
+        <div class="item one">1-justify-self
+        </div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+    </div>
+
+</body>
+
+</html>

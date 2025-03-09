@@ -1,0 +1,54 @@
+section {
+  margin-top: 100px;
+}
+div {
+  width: 200px;
+  height: 50px;
+  text-align: center;
+  background-color: #7aa874;
+  border: 2px solid black;
+  margin: 10px auto;
+  /* 10px for top and bottom and auto for right left will bring the element in center */
+}
+
+div:nth-of-type(2n) {
+  background-color: #f7db6a;
+}
+
+div:nth-of-type(3n) {
+  background-color: #ebb02d;
+}
+
+/* Transform (i) rotate */
+#div1 {
+  transform: rotate(45deg);
+  /* other values can be provided like 90 , 180 or -90 or -45 etc. */
+}
+
+/* Transform (ii) Scale */
+/* 1.5 times of the original size */
+#div2 {
+  transform: scale(1.5);
+}
+/* we can control both x and y like how much time of x and y */
+#div3 {
+  transform: scale(0.5, 1.5);
+  /* 0.5 means half length and 1.5 means width 1.5 times */
+}
+
+/* Transform (iii) Translate */
+/* div4 will move 100px from X and Y both axes */
+#div4 {
+  transform: translate(100px, 0);
+}
+
+/* Transform (iv) Skew */
+#div5 {
+  transform: skew(30deg);
+  /* negative value like -30deg will tilt the element on right side */
+}
+
+/* Shorthand way to apply rotation, skew, translate etc */
+#div6 {
+  transform: rotate(45deg) translate(100px);
+}

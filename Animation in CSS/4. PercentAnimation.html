@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- Percent Animation gives more control on Animation. You can set more state in this way -->
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Percent Animation</title>
+    <style>
+        /* Color changing Animation */
+        @keyframes multiColor {
+            0% {
+                background-color: yellow;
+            }
+
+            50% {
+                background-color: orange;
+            }
+
+            100% {
+                background-color: red;
+
+            }
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: orange;
+            color: black;
+            text-align: center;
+            /* Applying Animation in ShortHand */
+            /* animation: animationName duration timing-function delay iteration-count direction fill-mode;
+ */
+            animation: multiColor 3s ease-in 1ms infinite normal;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">Good Morning</div>
+</body>
+
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex direction</title>
+    <style>
+        * {
+            text-align: center;
+        }
+
+        .container {
+            height: 250px;
+            width: 80%;
+            border: 3px solid black;
+            margin: 5px auto;
+            color: white;
+            background-color: palevioletred;
+            display: flex;
+        }
+
+        .flexItem {
+            height: 40px;
+            width: 80px;
+            border: 2px solid black;
+        }
+
+        #flexContainer1 {
+            /* When display: flex, By Default the flex direction set as row which means items are align from left to right Horizontally*/
+            flex-direction: row;
+            /* but you can set it manually also */
+        }
+
+        #flexContainer2 {
+            flex-direction: row-reverse;
+        }
+
+        #flexContainer3 {
+            flex-direction: column;
+        }
+
+        #flexContainer4 {
+            flex-direction: column-reverse;
+        }
+    </style>
+</head>
+
+<body>
+    <h4>Display Flex,flex-direction:row(left to right -->)</h4>
+    <div id="flexContainer1" class="container">
+        <div class="flexItem">1(Start)</div>
+        <div class="flexItem">2</div>
+        <div class="flexItem">3</div>
+        <div class="flexItem">4(End)</div>
+    </div>
+    <h4>Display Flex, flex-direction:row-reverse(right to left <--) </h4>
+            <div id="flexContainer2" class="container">
+                <div class="flexItem">1(Start)</div>
+                <div class="flexItem">2</div>
+                <div class="flexItem">3</div>
+                <div class="flexItem">4(End)</div>
+            </div>
+            <h4>Display Flex, flex-direction:column(From top to bottom)</h4>
+            <div id="flexContainer3" class="container">
+                <div class="flexItem">1(Start)</div>
+                <div class="flexItem">2</div>
+                <div class="flexItem">3</div>
+                <div class="flexItem">4(End)</div>
+            </div>
+            <h4>Display Flex, flex-direction:column-reverse(From bottom to Top)</h4>
+            <div id="flexContainer4" class="container">
+                <div class="flexItem">1(Start)</div>
+                <div class="flexItem">2</div>
+                <div class="flexItem">3</div>
+                <div class="flexItem">4(End)</div>
+            </div>
+</body>
+
+</html>

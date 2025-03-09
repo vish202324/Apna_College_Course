@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align Selft</title>
+    <style>
+        * {
+            text-align: center;
+        }
+
+        .containerRow {
+            height: 200px;
+            width: 80%;
+            border: 3px solid black;
+            margin: 5px auto;
+            color: white;
+            display: flex;
+        }
+
+        /* Child div */
+        .flexItem {
+            height: 40px;
+            width: 80px;
+            border: 2px solid rgb(255, 255, 255);
+            background-color: black;
+        }
+
+        #flexContainer1 {
+            background-color: rgb(196, 234, 92);
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+
+        /* controlling div-4 from the container */
+        #div4 {
+            flex-direction: row;
+            align-self: flex-end;
+        }
+    </style>
+</head>
+
+<body>
+    <h4>flex-direction:row, align-self: flex-end(only for div-4)</h4>
+    <div id="flexContainer1" class="containerRow">
+        <div class="flexItem">1(Start)</div>
+        <div class="flexItem">2</div>
+        <div class="flexItem">3</div>
+        <div class="flexItem" id="div4">4(End)</div>
+    </div>
+</body>
+
+</html>

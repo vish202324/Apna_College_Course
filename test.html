@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flexbox Demo</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+
+        .controls {
+            margin-bottom: 20px;
+        }
+
+        .container {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+            align-content: center;
+            width: 80%;
+            height: 300px;
+            border: 2px solid black;
+            margin: auto;
+            background: lightgray;
+        }
+
+        .box {
+            width: 100px;
+            height: 50px;
+            background: lightblue;
+            margin: 5px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h2>Interactive Flexbox Demo</h2>
+
+    <div class="controls">
+        <label for="justify">Justify Content:</label>
+        <select id="justify" onchange="updateFlexbox()">
+            <option value="flex-start">flex-start</option>
+            <option value="flex-end">flex-end</option>
+            <option value="center" selected>center</option>
+            <option value="space-between">space-between</option>
+            <option value="space-around">space-around</option>
+            <option value="space-evenly">space-evenly</option>
+        </select>
+
+        <label for="alignItems">Align Items:</label>
+        <select id="alignItems" onchange="updateFlexbox()">
+            <option value="flex-start">flex-start</option>
+            <option value="flex-end">flex-end</option>
+            <option value="center" selected>center</option>
+            <option value="stretch">stretch</option>
+            <option value="baseline">baseline</option>
+        </select>
+
+        <label for="alignContent">Align Content:</label>
+        <select id="alignContent" onchange="updateFlexbox()">
+            <option value="flex-start">flex-start</option>
+            <option value="flex-end">flex-end</option>
+            <option value="center" selected>center</option>
+            <option value="space-between">space-between</option>
+            <option value="space-around">space-around</option>
+            <option value="space-evenly">space-evenly</option>
+        </select>
+
+        <label for="flexWrap">Flex Wrap:</label>
+        <select id="flexWrap" onchange="updateFlexbox()">
+            <option value="nowrap" selected>nowrap</option>
+            <option value="wrap">wrap</option>
+            <option value="wrap-reverse">wrap-reverse</option>
+        </select>
+    </div>
+
+    <div class="container" id="flexContainer">
+        <div class="box">1</div>
+        <div class="box">2</div>
+        <div class="box">3</div>
+        <div class="box">4</div>
+        <div class="box">5</div>
+    </div>
+
+    <script>
+        function updateFlexbox() {
+            let container = document.getElementById("flexContainer");
+            let justify = document.getElementById("justify").value;
+            let alignItems = document.getElementById("alignItems").value;
+            let alignContent = document.getElementById("alignContent").value;
+            let flexWrap = document.getElementById("flexWrap").value;
+
+            container.style.justifyContent = justify;
+            container.style.alignItems = alignItems;
+            container.style.alignContent = alignContent;
+            container.style.flexWrap = flexWrap;
+        }
+    </script>
+
+</body>
+
+</html>

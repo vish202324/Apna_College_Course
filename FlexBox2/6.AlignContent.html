@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Align Content Concept</title>
+    <style>
+        * {
+            text-align: center;
+        }
+
+        .containerRow {
+            height: 400px;
+            width: 800px;
+            border: 3px solid black;
+            margin: 5px auto;
+            color: white;
+            display: flex;
+        }
+
+        /* Child div */
+        .flexItem {
+            height: 40px;
+            width: 400px;
+            border: 2px solid rgb(255, 255, 255);
+            background-color: black;
+        }
+
+        #flexContainer1 {
+            background-color: rgb(88, 170, 225);
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-items: flex-start;
+        }
+
+        #flexContainer2 {
+            background-color: rgb(229, 105, 220);
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: flex-end;
+        }
+
+        #flexContainer3 {
+            background-color: rgb(229, 196, 105);
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: center;
+        }
+
+        #flexContainer4 {
+            background-color: rgb(105, 229, 223);
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: space-around;
+        }
+
+        #flexContainer5 {
+            background-color: rgb(229, 155, 105);
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: space-between;
+        }
+
+        #flexContainer6 {
+            background-color: rgb(147, 75, 210);
+            flex-direction: row;
+            flex-wrap: wrap;
+            align-content: stretch;
+        }
+
+        #flexContainer7 {
+            background-color: rgb(88, 170, 225);
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: flex-start;
+        }
+
+        #flexContainer8 {
+            background-color: rgb(229, 105, 220);
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: flex-end;
+        }
+
+        #flexContainer9 {
+            background-color: rgb(229, 196, 105);
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h4 style="color: red; font-weight: bold;"> Align-content works for cross axis because flex items are in vertical
+        direction here</h4>
+    <h4>flex-direction: row , flex-wrap: wrap, Align-content: flex-start</h4>
+    <div id="flexContainer1" class="containerRow">
+        <div class="flexItem">1(Start)</div>
+        <div class="flexItem">2</div>
+        <div class="flexItem">3</div>
+        <div class="flexItem">4(End)</div>
+    </div>
+    <h4>flex-direction: row ,flex-wrap: wrap, Align-content: flex-end</h4>
+    <div id="flexContainer2" class="containerRow">
+        <div class="flexItem">1(Start)</div>
+        <div class="flexItem">2</div>
+        <div class="flexItem">3</div>
+        <div class="flexItem">4(End)</div>
+    </div>
+    <h4>flex-direction: row ,flex-wrap: wrap, Align-content: center</h4>
+    <div id="flexContainer3" class="containerRow">
+        <div class="flexItem">1(Start)</div>
+        <div class="flexItem">2</div>
+        <div class="flexItem">3</div>
+        <div class="flexItem">4(End)</div>
+    </div>
+    <h4>flex-wrap: wrap, Align-content: space-around</h4>
+    <div id="flexContainer4" class="containerRow">
+        <div class="flexItem">1(Start)</div>
+        <div class="flexItem">2</div>
+        <div class="flexItem">3</div>
+        <div class="flexItem">4(End)</div>
+    </div>
+    <h4>flex-wrap: wrap, Align-content: space-between</h4>
+    <div id="flexContainer5" class="containerRow">
+        <div class="flexItem">1(Start)</div>
+        <div class="flexItem">2</div>
+        <div class="flexItem">3</div>
+        <div class="flexItem">4(End)</div>
+    </div>
+    <h4>flex-wrap: wrap, Align-content: stretch</h4>
+    <div id="flexContainer6" class="containerRow">
+        <div class="flexItem">1(Start)</div>
+        <div class="flexItem">2</div>
+        <div class="flexItem">3</div>
+        <div class="flexItem">4(End)</div>
+    </div>
+    <h4>flex-direction: column ,flex-wrap: wrap, Align-content: flex-start</h4>
+    <div id="flexContainer7" class="containerRow">
+        <div class="flexItem">1(Start)</div>
+        <div class="flexItem">2</div>
+        <div class="flexItem">3</div>
+        <div class="flexItem">4(End)</div>
+    </div>
+    <h4> flex-direction: column,flex-wrap: wrap, Align-content: flex-end</h4>
+    <div id="flexContainer8" class="containerRow">
+        <div class="flexItem">1(Start)</div>
+        <div class="flexItem">2</div>
+        <div class="flexItem">3</div>
+        <div class="flexItem">4(End)</div>
+    </div>
+    <h4>flex-direction: column,flex-wrap: wrap, Align-content: center</h4>
+    <div id="flexContainer9" class="containerRow">
+        <div class="flexItem">1(Start)</div>
+        <div class="flexItem">2</div>
+        <div class="flexItem">3</div>
+        <div class="flexItem">4(End)</div>
+    </div>
+</body>
+
+</html>

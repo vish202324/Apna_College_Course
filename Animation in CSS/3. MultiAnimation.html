@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi Animation</title>
+    <style>
+        /* font changing Animation */
+        @keyframes multiAnimate {
+            from {
+                font-size: 0;
+                background-color: yellow;
+                width: 0px;
+            }
+
+            to {
+                font-size: 45px;
+                background-color: orange;
+                width: 300px;
+
+            }
+        }
+
+        .box {
+            width: 300px;
+            height: 300px;
+            background-color: orange;
+            color: black;
+            text-align: center;
+            /* Applying Animation in ShortHand */
+            /* animation: animationName duration timing-function delay iteration-count direction fill-mode;
+ */
+            animation: multiAnimate 5s ease-in 1ms infinite normal;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box">Good Morning</div>
+</body>
+
+</html>

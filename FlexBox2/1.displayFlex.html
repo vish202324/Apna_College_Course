@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Display Flex</title>
+    <style>
+        * {
+            text-align: center;
+        }
+
+        #flexContainer1 {
+            height: 300px;
+            width: 80%;
+            border: 3px solid black;
+            display: flex;
+            /* When display: flex, By Default the flex direction set as row which means items are align from left to right Horizontally*/
+            background-color: palevioletred;
+            margin: 5px auto;
+        }
+
+        #flexContainer2 {
+            height: 300px;
+            width: 80%;
+            border: 3px solid black;
+            display: flex;
+            flex-direction: column;
+            background-color: lightgreen;
+            margin: 5px auto;
+        }
+
+        .flexItem {
+            height: 80px;
+            width: 80px;
+            border: 2px solid black;
+
+        }
+    </style>
+</head>
+
+<body>
+    <h4>Display Flex,flex-direction:row(by default, not need to set this properties when display is flex)</h4>
+    <div id="flexContainer1">
+        <div class="flexItem"></div>
+        <div class="flexItem"></div>
+        <div class="flexItem"></div>
+        <div class="flexItem"></div>
+    </div>
+    <h4>Display Flex, flex-direction:column</h4>
+    <div id="flexContainer2">
+        <div class="flexItem"></div>
+        <div class="flexItem"></div>
+        <div class="flexItem"></div>
+        <div class="flexItem"></div>
+    </div>
+</body>
+
+</html>

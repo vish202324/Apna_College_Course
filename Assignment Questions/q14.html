@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Q14 navbar</title>
+    <style>
+        #nav {
+            margin: 10px auto;
+            height: 50px;
+            width: 900px;
+            border: 2px solid rgb(78, 171, 200);
+            border-radius: 10px;
+            background-color: pink;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            /* when height of parent div increase this will keep the items in the center of the vertical cross axis */
+            align-items: center;
+        }
+
+        .navItems {
+            height: 50px;
+            width: 90px;
+            font-size: 20px;
+            display: flex;
+            /* Enables flexbox */
+            align-items: center;
+            /* Centers text vertically */
+            justify-content: center;
+            /* Centers text horizontally */
+            margin-left: 5px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="nav">
+        <div class="navItems">Logo</div>
+        <div class="navItems">Home</div>
+        <div class="navItems">About us</div>
+        <div class="navItems">Contact us</div>
+    </div>
+</body>
+
+</html>

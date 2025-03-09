@@ -1,0 +1,44 @@
+div {
+  color: white;
+  height: 100px;
+  width: 100px;
+  background-color: green;
+  text-align: center;
+  border: 3px solid black;
+  margin: 20px;
+  display: inline-block;
+}
+
+/* position if not set will also consider as static */
+/* static position will not affect the position of the element */
+#static {
+  background-color: yellow;
+  position: static;
+  top: 100px; /* will not make any impact because position is static*/
+  left: 100px; /* will not make any impact because position is static*/
+}
+
+/* Position Relative */
+#relative {
+  background-color: palevioletred;
+  position: relative;
+  top: 100px; /* will make impact because position is relative*/
+  left: 100px; /* will make impact because position is relative and element will shift to right side from left*/
+}
+
+/* Position Relative */
+/* because section,body(which is the parent of div whose id is absolute) has no position, so element will shift along the parent(body or can say section)  */
+#absolute {
+  background-color: rgb(42, 207, 179);
+  position: absolute;
+  top: 100px;
+  left: 100px;
+}
+
+/* Fixed Position */
+#fixed {
+  background-color: rgb(42, 56, 207);
+  position: fixed;
+  top: 100px;
+  left: 100px;
+}
