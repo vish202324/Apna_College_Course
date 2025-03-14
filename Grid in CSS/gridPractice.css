@@ -1,0 +1,42 @@
+.container1 {
+  /* General Container Properties */
+  width: 600px;
+  height: 600px;
+  border: 2px solid red;
+  background-color: pink;
+
+  /* Making Container as a Grid */
+  display: grid;
+
+  /* Below are the two ways to declare rows and columns, 
+  you can provide the px values or use repeat method */
+  grid-template-rows: 100px 100px 100px 100px 100px 100px;
+  grid-template-columns: repeat(5, 1fr);
+
+  /* Providing gap between grid items increase the container area. which may 
+  cause grid items overflow from the container if grid items total area is 
+  more than Area of container */
+  gap: 5px;
+}
+
+.item {
+  /* General Properties of Grid item */
+  border: 0.5px solid black;
+  background-color: yellow;
+  /* if you don't provide h&w to grid item they expand as per the grid cell h&w. which 
+  declared by grid-template-rows and columns properties in container above*/
+
+  /* disabled due to  taking full height and width of the grid cell*/
+  /* width: 120px;
+  height: 120px; */
+}
+
+.div1 {
+  /* Declaring the expandation of the grid items */
+  grid-row-start: 1;
+  /* 3 row  */
+  grid-row-end: 3;
+
+  grid-column-start: 1;
+  grid-column-end: 4;
+}

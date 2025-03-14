@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Grid Demo Layout</title>
+    <style>
+        #container {
+            margin: 0;
+            padding: 0;
+            display: grid;
+            height: 90vh;
+            grid-template-rows: repeat(12, 1fr);
+            grid-template-columns: repeat(12, 1fr);
+            gap: 10px;
+        }
+
+        .item {
+            font-size: 1.2rem;
+            background-color: pink;
+        }
+
+        .header {
+            grid-column: 1 / span 12;
+        }
+
+        .sidebar {
+            grid-row: 2 / span 10;
+            grid-column: 1 / span 3;
+        }
+
+        .nevigation {
+            grid-row: 2 / 1 span;
+            grid-column: 4 / 6 span;
+        }
+
+        .ads {
+            grid-row: 2 / span 10;
+            grid-column: 10 / span 3;
+        }
+
+        .main {
+            grid-row: 3 / span 9;
+            grid-column: 4 / span 6;
+        }
+
+        .footer {
+            grid-column: 1 / span 12;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>CSS Grid Layout Practice</h1>
+    <div id="container">
+        <div class="item header">Header(1 row, 12 column)</div>
+        <div class="item nevigation">nevigation 1 row 6 column</div>
+        <div class="item sidebar">Sidebar(10 row, 3 column)</div>
+        <div class="item main">main 9 row, 6 column</div>
+        <div class="item ads">ads 10 row , 3 column</div>
+        <div class="item footer">footer 1 row, 12 column</div>
+    </div>
+</body>
+
+</html>

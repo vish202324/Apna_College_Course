@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+/* Navbar Styling */
+.navbar {
+  width: 100%;
+  height: 70px;
+  background-color: rgb(109, 159, 246);
+}
+
+/* Navigation List */
+.navbar-ul {
+  display: flex;
+  justify-content: space-evenly; /* Even spacing between items */
+  width: 100%;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Navigation Items */
+.navbar-ul .items {
+  flex: 1; /* Equal width for all items */
+  text-align: center;
+  height: 70px; /* Same height as navbar */
+  transition: background-color 0.3s;
+}
+
+/* Hover Effect: Slightly Darker */
+.navbar-ul .items:hover {
+  background-color: #72bcd4; /* Darker shade of lightblue */
+}
+
+/* Links */
+.navbar-ul .items a {
+  text-decoration: none;
+  color: white;
+  /* font-weight: bold; */
+  font-size: 18px;
+  width: 100%; /* Make the link fill the list item */
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

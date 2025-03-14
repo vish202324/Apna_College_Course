@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", sans-serif;
+}
+.main_box {
+  background: url(cam.jpg);
+  height: 100vh;
+  background-size: cover;
+}
+
+.btn_one i {
+  font-size: 30px;
+  color: white;
+  font-weight: 700;
+  /* Position will be reset and set to 16px from left in the respect of their parent div which is .main-box */
+  position: absolute;
+  left: 16px;
+  line-height: 60px;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+
+.sidebar_menu .btn_two i {
+  /* cross mark button */
+  color: grey;
+  font-size: 16px;
+  line-height: 60px;
+  position: absolute;
+  left: 275px;
+  /* hidding here by set opacity to 0 when menu is closed cross button will not shown*/
+  opacity: 0;
+  cursor: pointer;
+  transition: all 0.3s linear;
+}
+.sidebar_menu {
+  position: fixed;
+  /* means by default sidebar menu will be hidden from the normal position due to negative. */
+  left: -350px;
+
+  /* sidebar will take 100% width of the view-port */
+  height: 100vh;
+  width: 300px;
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 0 6px rgba(255, 255, 255, 0.5);
+  transition: all 0.3s linear;
+}
+
+.sidebar_menu .logo {
+  position: absolute;
+  width: 100%;
+  /* because button one line height is 60px also */
+  line-height: 60px;
+  box-shadow: 0 2px 4px rgba(255, 255, 255, 0.5);
+  height: 60px;
+}
+
+.sidebar_menu .logo a {
+  position: absolute;
+  color: white;
+  left: 50px;
+  text-decoration: none;
+}
+
+.sidebar_menu .menu {
+  position: absolute;
+  width: 100%;
+  top: 80px;
+}
+
+.sidebar_menu .menu li {
+  margin-top: 6px;
+  padding: 14px 20px;
+}
+
+.sidebar_menu .menu li,
+a {
+  color: white;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.sidebar_menu .menu i {
+  /* space between the icon and menu names */
+  padding-right: 5px;
+}
+
+.sidebar_menu .social_media {
+  position: absolute;
+  left: 25%;
+  bottom: 50px;
+}
+
+.sidebar_menu .social_media i {
+  opacity: 0.5;
+  color: white;
+  padding: 0 5px;
+}
+
+#check {
+  /* to hide the checkbox */
+  display: none;
+}
+
+/* Hover properties */
+.sidebar_menu .menu li:hover {
+  box-shadow: 0 0 4px rgba(255, 255, 255, 0.5);
+}
+
+.btn_one i:hover {
+  font-size: 40px;
+}
+
+.btn_two i:hover {
+  font-size: 20px;
+}
+
+.sidebar_menu .social_media i:hover {
+  opacity: 1;
+  /* will make the icons little bit larger compare to the original size */
+  transform: scale(1.2);
+  transition: all 0.3s linear;
+}
+
+#check:checked ~ .sidebar_menu {
+  left: 0;
+}
+
+/* when the menu visible we want to hide the Hembarg (3 line icon sign) to hide */
+#check:checked ~ .btn_one i {
+  opacity: 0;
+}
+
+/* when the menu visible we want to show the cross sign to close the menu */
+#check:checked ~ .sidebar_menu .btn_two i {
+  opacity: 1;
+}
