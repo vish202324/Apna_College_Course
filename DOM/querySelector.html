@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <p class="intro">Para : 1 Hello</p>
+    <p class="intro">Para : 2 Hi</p>
+    <div id="myDiv">This is Div</div>
+    <select name="" id="selectBox">
+      <option value="red">Red</option>
+      <option value="green">Green</option>
+    </select>
+  </body>
+
+  <script>
+    let el = document.querySelector(".intro");
+    let div = document.querySelector("#myDiv");
+    let divForColor = document.getElementById("myDiv");
+    let selectBox = document.getElementById("selectBox");
+    div.textContent = "Div Content changed";
+    el.textContent = "Vivek"; // Hello (only first element with class "intro")
+    selectBox.addEventListener("change", function () {
+      let selectedColor = selectBox.value;
+      divForColor.style.color = selectedColor;
+    });
+    // changing color of div inner text through drop down
+  </script>
+</html>

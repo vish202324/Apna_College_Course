@@ -1,0 +1,16 @@
+<!-- By using toggle property of classList-->
+ <!-- toggle property work like a on off switch -->
+<style>
+  .hide {
+    display: none;
+  }
+</style>
+
+<p id="msg">This is a message</p>
+<button onclick="toggleMessage()">Show/Hide</button>
+
+<script>
+  function toggleMessage() {
+    document.getElementById("msg").classList.toggle("hide");
+  }
+</script>

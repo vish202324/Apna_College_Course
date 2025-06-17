@@ -1,0 +1,49 @@
+* {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 15px;
+}
+#container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#sub_container {
+  border: 1px solid black;
+  height: 400px;
+  width: 400px;
+  border-radius: 3px;
+  box-shadow: 0px 5px 5px rgb(181, 174, 174);
+}
+
+.element {
+  padding: 6px;
+  margin: 4px;
+}
+
+input {
+  width: 250px;
+  height: 25px;
+  border-radius: 3px;
+  padding: 2px;
+}
+
+input[type="submit"] {
+  height: 35px;
+  width: 100px;
+  border-radius: 3px;
+
+  /* background-color: cornflowerblue; */
+  /* color: white; */
+}
+
+input[type="submit"]:hover {
+  height: 35px;
+  width: 100px;
+  border-radius: 3px;
+  background-color: cornflowerblue;
+  color: white;
+}

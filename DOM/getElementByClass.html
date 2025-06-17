@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>getElementsByClassName</title>
+  </head>
+  <body>
+    <p class="note">Note 1</p>
+    <p class="note">Note 2</p>
+  </body>
+  <script>
+    let notes = document.getElementsByClassName("note");
+    console.log(notes[0].textContent); // Note 1
+  </script>
+</html>

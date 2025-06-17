@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Change Color</title>
+  </head>
+  <body id="text">
+    <h2>Change Paragraph Text Color</h2>
+
+    <select id="colorSelect">
+      <option value="black">Black</option>
+      <option value="red">Red</option>
+      <option value="blue">Blue</option>
+      <option value="green">Green</option>
+    </select>
+
+    <p id="text">This is a sample paragraph.</p>
+
+    <script>
+      let selectBox = document.getElementById("colorSelect");
+      let paragraph = document.getElementById("text");
+
+      selectBox.addEventListener("change", function () {
+        let selectedColor = selectBox.value;
+        paragraph.style.backgroundColor = selectedColor;
+      });
+    </script>
+  </body>
+</html>

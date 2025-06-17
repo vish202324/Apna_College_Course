@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Form with JS</title>
+  </head>
+  <body>
+    <h2>Print Your Name</h2>
+    <label for="username">Name: </label><br />
+    <input type="text" id="username" /><br /><br />
+    <button value="submit" onclick="submit()">Submit</button>
+    <p id="myName"></p>
+  </body>
+  <script>
+    function submit() {
+      let name = document.getElementById("username").value;
+      document.getElementById("myName").textContent = "Your Name is: " + name;
+    }
+  </script>
+</html>

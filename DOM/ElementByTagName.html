@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Element By Tag Name</title>
+  </head>
+  <body>
+    <p>Paragraph 1</p>
+    <p>Paragraph 2</p>
+  </body>
+  <script>
+    let para = document.getElementsByTagName("p");
+    console.log("HTML Collection: ", para);
+    console.log(para.length);
+    console.log((para[0].innerText = "Vivek"));
+    // para[0] for targetting first paragraph only
+  </script>
+</html>

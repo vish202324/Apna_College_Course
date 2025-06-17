@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ClassList</title>
+    <style>
+      .headingStyle {
+        color: red;
+        font-size: larger;
+        background-color: black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1 id="heading">This is Heading</h1>
+  </body>
+  <script>
+    // Add ClassList using "classList.add('name of class')"
+    let heading = document.getElementById("heading");
+    heading.classList.add("headingStyle"); // Adding Class to apply style
+
+    //Check Class exist or not using "classList.contains('name of class')"
+    if (heading.classList.contains("newStyle")) {
+      console.log("Class exist");
+    } else {
+      console.log("class does not exist");
+    }
+
+    //ClassList toggle: discuss in showHide.html 
+    // set style using setAttribute
+    // heading.setAttribute("class", "headingStyle");
+    // it is not a good practice setAttribute used for set the attributes not for styling
+  </script>
+</html>

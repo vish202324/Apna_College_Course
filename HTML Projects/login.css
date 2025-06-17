@@ -1,0 +1,43 @@
+* {
+  font-family: "Trebuchet MS", "Lucida Sans Unicode", "Lucida Grande",
+    "Lucida Sans", Arial, sans-serif;
+  font-size: 15px;
+}
+#container {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+#sub_container {
+  border: 1px solid black;
+  height: 280px;
+  width: 400px;
+  border-radius: 3px;
+  box-shadow: 0px 5px 5px rgb(181, 174, 174);
+  /* background-color: gray; */
+}
+
+.element {
+  padding: 5px;
+  margin: 2px;
+}
+
+input[type="text"],
+[type="password"],
+[type="email"],
+[type="tel"] {
+  width: 250px;
+  height: 25px;
+  border-radius: 3px;
+}
+
+input[type="submit"] {
+  height: 35px;
+  width: 100px;
+  border-radius: 3px;
+  background-color: cornflowerblue;
+  color: white;
+}
