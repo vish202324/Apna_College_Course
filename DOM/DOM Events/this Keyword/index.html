@@ -1,0 +1,20 @@
+<h2>This is Heading</h2>
+<p>This is the Paragraph</p>
+<button>Click me!</button>
+
+<script>
+  // Elements which will trigger
+  let buttons = document.querySelector("button");
+  let p = document.querySelector("p");
+  let h2 = document.querySelector("h2");
+
+  function changeColor() {
+    // handeling Multi Events using "this" Keyword
+    this.style.backgroundColor = "orange";
+    // ✅ yeh wahi element hoga jo click hua
+  }
+
+  buttons.addEventListener("click", changeColor);
+  p.addEventListener("click", changeColor);
+  h2.addEventListener("click", changeColor);
+</script>

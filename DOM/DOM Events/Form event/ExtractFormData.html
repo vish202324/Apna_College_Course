@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Extract Form Data</title>
+  </head>
+  <body>
+    <form action="/submit">
+      <input type="text" name="username" id="username" />
+      <button type="submit">Submit</button>
+    </form>
+
+    <script>
+      let form = document.querySelector("form");
+      let input = document.querySelector("input");
+      form.addEventListener("submit", function (event) {
+        event.preventDefault(); // this will stop redirecting the page to destination
+        console.log(input); // this will give you input object
+        console.dir(input);
+        console.log(input.value); // this will give you input value
+      });
+    </script>
+  </body>
+</html>

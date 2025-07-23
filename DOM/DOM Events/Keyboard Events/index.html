@@ -1,0 +1,11 @@
+<input type="text" id="myInput" placeholder="Type something" />
+
+<script>
+  let input = document.getElementById("myInput");
+  // "keydown" is the name of event performed through keyboard
+  input.addEventListener("keydown", function (event) {
+    console.log("Key Pressed");
+    console.log("Key: ", event.key); // will print the pressed key.
+    console.log("Key Code: ", event.code);// will print the pressed key code
+  });
+</script>

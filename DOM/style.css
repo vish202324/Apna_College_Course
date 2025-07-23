@@ -26,3 +26,13 @@ body {
 #description {
   background-color: antiquewhite;
 }
+
+.btnStyle {
+  background-color: blue;
+  color: white;
+}
+
+.h1Text {
+  text-decoration: underline;
+  color: purple;
+}

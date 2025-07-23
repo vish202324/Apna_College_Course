@@ -1,0 +1,16 @@
+<input type="text" placeholder="Press Key Up, Down, Right and Left" />
+<script>
+  let input = document.querySelector("input");
+  input.addEventListener("keydown", function (event) {
+    console.log("code= ", event.code); // print only key code
+    if (event.code == "ArrowUp") {
+      console.log("Up key pressed");
+    } else if (event.code == "ArrowDown") {
+      console.log("Down key pressed");
+    } else if (event.code == "ArrowLeft") {
+      console.log("Left Arrow key pressed");
+    } else if (event.code == "ArrowRight") {
+      console.log("Arrow Right key pressed");
+    }
+  });
+</script>

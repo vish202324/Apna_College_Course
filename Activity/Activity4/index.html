@@ -1,0 +1,26 @@
+<style>
+  li {
+    margin: 5px 0;
+    cursor: pointer;
+  }
+
+  .completed {
+    text-decoration: line-through;
+    color: gray;
+  }
+
+  .delete {
+    margin-left: 10px;
+    color: red;
+    background: none;
+    border: none;
+    cursor: pointer;
+  }
+</style>
+<h2>Todo List</h2>
+
+<input type="text" id="taskInput" placeholder="Enter task" />
+<button id="addBtn">Add Task</button>
+
+<ul id="taskList"></ul>
+<script src="script.js"></script>
