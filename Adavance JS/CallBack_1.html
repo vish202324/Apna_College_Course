@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Callback Hell</title>
+  </head>
+  <body>
+    <h3>Callback Hell</h3>
+
+    <script>
+      let h3 = document.querySelector("h3");
+
+      // function
+      function changeColor(color, delay, nextChangeColor) {
+        setTimeout(() => {
+          h3.style.color = color;
+          if (nextChangeColor) nextChangeColor();
+        }, delay);
+      }
+      //Callback Hell
+      changeColor("red", 1000, () => {
+        changeColor("green", 1000, () => {
+          changeColor("violet", 1000, () => {
+            changeColor("blue", 1000, () => {
+              changeColor("pink", 1000);
+            });
+          });
+        });
+      });
+    </script>
+  </body>
+</html>

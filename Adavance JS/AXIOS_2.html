@@ -1,0 +1,60 @@
+<h3>Get Latest Dog Picture</h3>
+<button id="getPicBtn">Get New Pic</button>
+<p id="statusText">Click the button to get a cute dog picture!</p>
+<img
+  src="#"
+  id="dogImg"
+  alt="Random Dog Image"
+  width="300"
+  style="
+    display: none;
+    border: 2px solid #ccc;
+    border-radius: 8px;
+    margin-top: 10px;
+  "
+/>
+
+<!-- Axios CDN -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<script>
+  const btn = document.getElementById("getPicBtn");
+  const img = document.getElementById("dogImg");
+  const statusText = document.getElementById("statusText");
+
+  const url = "https://dog.ceo/api/breeds/image/random";
+
+  // 👇 Fetch dog image using Axios
+  async function getDogImage() {
+    try {
+      statusText.innerText = "🐶 Fetching image, please wait...";
+      img.style.display = "none"; // Hide old image while new one loads
+
+      const response = await axios.get(url);
+
+      // Check if image received
+      if (response.status === 200 && response.data.status === "success") {
+        return response.data.message;
+      } else {
+        throw new Error("Failed to fetch image.");
+      }
+    } catch (error) {
+      console.error("Error:", error.message);
+      return null;
+    }
+  }
+
+  // 👇 Handle button click
+  btn.addEventListener("click", async () => {
+    const imageUrl = await getDogImage();
+
+    if (imageUrl) {
+      img.src = imageUrl;
+      img.style.display = "block";
+      statusText.innerText = "✅ Here's a random dog picture!";
+    } else {
+      statusText.innerText = "❌ Failed to load image. Please try again.";
+      img.style.display = "none";
+    }
+  });
+</script>

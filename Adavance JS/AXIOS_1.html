@@ -1,0 +1,35 @@
+<h3>Get Latest Cat Fact</h3>
+<button id="getFactBtn">Get New Fact</button>
+<p id="facts">Click the button to get a new cat fact!</p>
+
+<!-- Axios CDN -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<script>
+  const btn = document.getElementById("getFactBtn");
+  const factsPara = document.getElementById("facts");
+  const url = "https://catfact.ninja/fact";
+
+  // 👇 Function to fetch cat fact using Axios
+  async function getCatFact() {
+    try {
+      // Show loading message
+      factsPara.innerText = "Loading fact... Please wait.";
+
+      // API request
+      const response = await axios.get(url);
+
+      // Return the fact from response
+      return response.data.fact;
+    } catch (error) {
+      console.error("API Error:", error.message);
+      return "❌ Failed to load fact. Please try again.";
+    }
+  }
+
+  // 👇 Event listener for button click
+  btn.addEventListener("click", async () => {
+    const fact = await getCatFact(); // wait for response
+    factsPara.innerText = fact; // display the fact
+  });
+</script>

@@ -1,0 +1,45 @@
+<h3>🎓 Find Universities in Your Country</h3>
+<input type="text" id="countryInput" placeholder="Enter country name" />
+<button id="searchBtn">Search</button>
+<ul id="universityList"></ul>
+
+<!-- Axios CDN -->
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+<script>
+  const btn = document.getElementById("searchBtn");
+  const input = document.getElementById("countryInput");
+  const list = document.getElementById("universityList");
+
+  // 👉 Event listener on button
+  btn.addEventListener("click", async () => {
+    let country = input.value.trim(); // Get input value
+    if (country === "") return alert("Please enter a country name!");
+
+    let url = `http://universities.hipolabs.com/search?name=${country}`;
+
+    try {
+      let res = await axios.get(url); // Axios GET request
+      let data = res.data;
+
+      // Clear previous results
+      list.innerHTML = "";
+
+      // Show message if no universities found
+      if (data.length === 0) {
+        list.innerHTML = `<li>No universities found in "${country}"</li>`;
+        return;
+      }
+
+      // Display universities list
+      data.forEach((university) => {
+        let li = document.createElement("li");
+        li.innerText = university.name;
+        list.appendChild(li);
+      });
+    } catch (error) {
+      console.log("Error fetching data:", error);
+      list.innerHTML = `<li>❌ Failed to fetch data</li>`;
+    }
+  });
+</script>

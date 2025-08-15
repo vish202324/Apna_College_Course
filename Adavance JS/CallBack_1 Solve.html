@@ -1,0 +1,31 @@
+<h3>Callback Hell</h3>
+
+<script>
+  let h3 = document.querySelector("h3");
+
+  // function
+  function changeColor(color, delay) {
+    return new Promise((resolve, reject) => {
+      setTimeout(() => {
+        h3.style.color = color;
+        resolve("color changed");
+      }, delay);
+    });
+  }
+  //Callback Hell
+  changeColor("red", 1000)
+    .then((result) => {
+      console.log(result);
+      return changeColor("green", 1000);
+    })
+    .then((result) => {
+      console.log(result);
+      return changeColor("blue", 1000);
+    })
+    .then((result) => {
+      console.log(result);
+    })
+    .catch((error) => {
+      console.log(error);
+    });
+</script>

@@ -1,0 +1,12 @@
+<h3>Loading...</h3>
+<script>
+  fetch("https://catfact.ninja/fact")
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data.fact); // show fact in console
+      document.querySelector("h3").innerText = data.fact;
+    })
+    .catch((error) => {
+      console.log("Error fetching data", error);
+    });
+</script>

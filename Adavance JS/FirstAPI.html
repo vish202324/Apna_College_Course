@@ -1,0 +1,22 @@
+<!-- First API Request Using fetch() -->
+<script>
+  let url = "https://catfact.ninja/fact"; // from where we get the random fact via API Request.
+  fetch(url) // this will return a promise (response, error)
+    .then((res1) => {
+      // response aaya
+      return res1.json(); // response me aaye data ko parse kiya
+    })
+    .then((data) => {
+      console.log("data1- ", data.fact); // agar parse ho chuki to print kardo
+      return fetch(url); // ek or request send ki
+    })
+    .then((res2) => {
+      return res2.json(); //
+    })
+    .then((data2) => {
+      console.log("data2- ", data2.fact);
+    })
+    .catch((err) => {
+      console.log(err);
+    });
+</script>

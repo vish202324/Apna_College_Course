@@ -1,0 +1,10 @@
+<script>
+  fetch("https://api.weatherapi.com/v1/current.json?q=Delhi")
+    .then((response) => response.json())
+    .then((data) => {
+      console.log("Temperature:", data.current.temp_c);
+    })
+    .catch((error) => {
+      console.log("Error fetching weather:", error);
+    });
+</script>

@@ -1,0 +1,38 @@
+<script>
+  function saveToDb(data, success, failure) {
+    let internetSpeed = Math.floor(Math.random() * 10) + 1;
+    if (internetSpeed > 4) {
+      success();
+    } else {
+      failure();
+    }
+  }
+
+  saveToDb(
+    "Data 1",
+    () => {
+      console.log("Sucess: Data has been saved ");
+      saveToDb(
+        "Data 2",
+        () => {
+          console.log("Success2: Data 2 has been saved");
+          saveToDb(
+            "Vivek Sharma",
+            () => {
+              console.log("Success3: Data 3 has been saved");
+            },
+            () => {
+              console.log("failure3: weak connection");
+            }
+          );
+        },
+        () => {
+          console.log("Failure2:  Weak Connection");
+        }
+      );
+    },
+    () => {
+      console.log("Failure:  Weak Connection");
+    }
+  );
+</script>

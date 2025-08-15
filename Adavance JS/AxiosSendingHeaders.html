@@ -1,0 +1,14 @@
+<script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+<script>
+  let url = "https://icanhazdadjoke.com";
+  async function getjoke() {
+    let config = { headers: { Accept: "application/json" } };
+    try {
+      let res = await axios.get(url, config);
+      console.log(res.data.joke);
+    } catch (error) {
+      console.log(error);
+    }
+  }
+  getjoke();
+</script>

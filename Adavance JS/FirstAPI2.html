@@ -1,0 +1,25 @@
+<!-- First API Request Using fetch() with async/await -->
+<script>
+  let url = "https://catfact.ninja/fact";
+
+  // We define an async function to use await inside
+  async function getCatFacts() {
+    try {
+      // Request 1: Waiting for response
+      let res1 = await fetch(url);
+      let data1 = await res1.json(); // Parse response
+      console.log("Fact 1: ", data1.fact);
+
+      // Request 2: Another request after first is done
+      let res2 = await fetch(url);
+      let data2 = await res2.json(); // Parse second response
+      console.log("Fact 2: ", data2.fact);
+    } catch (err) {
+      // If any request fails, this block runs
+      console.log("Error occurred:", err);
+    }
+  }
+
+  // Call the function
+  getCatFacts();
+</script>

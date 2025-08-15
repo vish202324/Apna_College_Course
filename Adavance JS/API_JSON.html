@@ -1,0 +1,17 @@
+<script>
+  let jsonRes =
+    '{"fact":"A cat usually has about 12 whiskers on each side of its face.","length":61}';
+  console.log(jsonRes);
+
+  let jsonObj = JSON.parse(jsonRes); // converting json response into js object
+  console.log(jsonObj.fact);
+
+  // wants to convert js object in to json using another method 'JSON.stringify()'
+  let student = {
+    name: "vivek",
+    marks: 95,
+  };
+
+  // converting into json
+  console.log(JSON.stringify(student));
+</script>

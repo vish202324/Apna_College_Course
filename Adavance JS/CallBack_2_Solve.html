@@ -1,0 +1,35 @@
+<!-- In this code we have improved the callback hell situation using promises -->
+
+<script>
+  // resolve-> success, reject-> failure
+  function saveToDb(data) {
+    return new Promise((resolve, failure) => {
+      let internetSpeed = Math.floor(Math.random() * 10) + 1;
+      if (internetSpeed > 4) {
+        resolve("Sucess: Data has been saved "); // can be print through 'result' argument
+      } else {
+        failure("Failure:  Weak Connection"); // can be print through 'error' argument
+      }
+    });
+  }
+
+  saveToDb("data 1")
+    .then((result) => {
+      console.log("date1 saved");
+      console.log("result of promise ", result);
+      return saveToDb("data 2"); // next call
+    })
+    .then((result) => {
+      console.log("date2 saved: promise was resolved");
+      console.log("result of promise ", result);
+      return saveToDb("Vivek sharma"); // next call
+    })
+    .then((result) => {
+      console.log("date3 saved: promise was resolved");
+      console.log("result of promise ", result);
+    })
+    .catch((error) => {
+      console.log("promise was rejected");
+      console.log("error of promise ", error);
+    });
+</script>
