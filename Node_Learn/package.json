@@ -1,0 +1,12 @@
+{
+  "name": "node_learn",
+  "version": "1.0.0",
+  "description": "In this we will cover all the Notes of Node Related. Course Begin on 15 August 2025.",
+  "main": "Math.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC",
+  "type": "module"
+}
