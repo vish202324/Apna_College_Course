@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Dice Roll</title>
+  </head>
+  <body>
+    <h1>🎲 Dice Value: <%= diceValue %></h1>
+    <hr />
+
+    <% if (diceValue === 6) { %>
+    <h2>Woah! You rolled a 6 😍</h2>
+    <p>👉 Roll again for extra luck!</p>
+    <% } else { %>
+    <h2>You rolled <%= diceValue %> 👍</h2>
+    <% } %>
+  </body>
+</html>

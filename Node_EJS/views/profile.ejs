@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Instagram Profile</title>
+  </head>
+  <body>
+    <h1>📸 Instagram Profile</h1>
+    <hr />
+    <h2>Welcome @<%= data.username %></h2>
+    <p>Followers: <%= data.followers %></p>
+
+    <% if(data.isPrivate) { %>
+    <p>This Account is Private 🔒</p>
+    <% } else { %> 
+        <% if(data.posts.length === 0) { %>
+    <p>No Posts Yet.</p>
+    <% } else { %>
+    <h3>Posts:</h3>
+    <ul>
+      <% data.posts.forEach(post => { %>
+      <li><%= post %></li>
+      <% }) %>
+    </ul>
+    <% } %> <% } %>
+  </body>
+</html>
