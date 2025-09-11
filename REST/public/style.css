@@ -1,0 +1,12 @@
+h1 {
+  color: blue;
+}
+#post {
+  background-color: blanchedalmond;
+}
+
+.user {
+  font-weight: bold;
+  font-style: italic;
+  background-color: lightskyblue;
+}
