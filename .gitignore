@@ -1,2 +1,2 @@
-
-.gitattributes
+# Ignore all node_modules everywhere
+**/node_modules
